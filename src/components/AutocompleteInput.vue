@@ -152,7 +152,9 @@ input {
   border: 1px solid var(--border);
   background: var(--panel);
   color: var(--text-h);
-  font-size: 15px;
+  /* iOS Safari auto-zooms the page on focus if a focused input's font-size
+     is under 16px - keep this at 16px+ everywhere, including mobile. */
+  font-size: 16px;
 }
 
 input:focus {

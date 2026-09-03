@@ -256,7 +256,9 @@ label {
   border: 1px solid var(--border);
   background: var(--panel);
   color: var(--text-h);
-  font-size: 15px;
+  /* iOS Safari auto-zooms the page on focus if a focused input's font-size
+     is under 16px - keep this at 16px+ everywhere, including mobile. */
+  font-size: 16px;
   box-sizing: border-box;
   min-width: 0;
 }
@@ -379,7 +381,8 @@ label {
   .year-wrap input,
   .year-wrap select {
     padding: 8px 6px;
-    font-size: 13px;
+    /* Stay at 16px (not smaller) - anything under that re-triggers iOS
+       Safari's zoom-on-focus behavior. */
   }
 }
 </style>
